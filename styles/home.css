@@ -1,0 +1,244 @@
+body {
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font as needed */
+}
+.intro{
+  display: flex;
+  align-items: flex-start;
+  text-decoration: solid underline;
+  max-width: 800px;
+  text-align: left;
+  font-size: 68px;
+  line-height: 1.6;
+}
+.intro2{
+  display: flex;
+  width: 60%;
+  align-items: flex-start;
+  text-decoration: solid;
+  max-width: 800px;
+  text-align: left;
+  font-size: 28px;
+  line-height: 1.6;
+}
+.intro-text {
+  font-size: 30px; /* Adjust the font size as needed */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black outline */
+}
+
+h1{
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+span{
+  font-size: 2.5em;
+}
+
+.home-title{
+  font-size: 64px!important;
+  line-height: 76px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.row-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  height: auto; /* Set a fixed height */
+  margin: 0 auto; /* Center the container */
+}
+
+
+.letterrow {
+  height: auto;
+  flex-basis: 48%; /* Two columns, each taking up 48% of the container width */
+  margin-bottom: 10px; /* Optional margin between rows */
+  display: flex;
+  justify-content: center;
+}
+.iconletter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  flex-direction: column;
+}
+.container-letter{
+  display: flex;
+  flex:1;
+  margin: 5px;
+  align-items: flex-end;
+}
+.container-row{
+  width:80%;
+  display: flex;
+  flex:1;
+  margin: 5px;
+  text-align: center;
+}
+.marginup{
+  margin-bottom: 20px;
+}
+.glamorous-icon1 {
+  font-size: 100px;
+  color: #ff0000;
+  text-shadow: 0 0 10px #ff0000;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: underline; 
+}
+.glamorous-icon2 {
+  font-size: 100px;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: underline;
+}
+.glamorous-icon3 {
+  font-size: 100px;
+  color: #FF6F61;
+  text-shadow: 0 0 10px #FF6F61;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: underline; 
+}
+.glamorous-icon4 {
+  font-size: 100px;
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+  cursor: pointer;
+  padding: 10px;
+  text-decoration: underline; 
+}
+.attention-getter{
+  display: flex;
+  align-items: center;
+}
+.slideshow-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+
+.lottie-container{
+  display:flex;
+  justify-content: center;
+}
+
+
+.column{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex:1;
+}
+
+.map-container {
+  min-height: 550px;
+  display: flex;
+  justify-content: center;
+}
+.map-elements {
+  width:48%;
+  display: flex;  
+  flex-direction: column;  
+  flex: 1;
+  justify-content: center;
+}
+
+.overlay-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slideoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(35, 45, 227,0.9) 20%, rgba(173, 216, 230, 0) 100%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-text {  
+  height: 60%;
+  width:95%;
+  color: white; /* Adjust text color */
+  padding: 10px;
+}
+
+
+/* Rest of your existing styles */
+
+
+.image-container {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicking through the overlay */
+}
+
+.image-container:hover .blurable-image {
+  width:100%;
+  filter: blur(2px); /* Adjust the blur amount */
+}
+.hover-element {
+  font-size:3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust the text color */
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none; /* Allows clicking through the hover element */
+}
+
+.image-container:hover .hover-element {
+  opacity: 1;
+}
+
+
+/* For Footer background */
+.footer-container{
+  background-color: lightblue;
+}
+
+@media only screen and (max-width: 600px) {
+  body{
+    
+  }
+  .intro{
+    font-size: 50px;
+  }
+  .intro2{
+    font-size: 20px;
+  }
+  .intro-text{
+    font-size: 15px;
+  }
+}

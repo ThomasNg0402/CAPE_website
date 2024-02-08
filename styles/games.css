@@ -1,0 +1,138 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  cursor: crosshair;
+}
+/* Body overflow */
+body {
+  overflow: hidden;
+}
+/* Scoring */
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+.light h1, .light h3{
+  color: black;
+}
+h3{
+    color: white;
+}
+/* Description */
+.description{
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    color: #a7a7a7;
+    transform: translate(-50%,-50%);
+}
+/* Bubble */
+.bubble {
+  position: absolute;
+  display: flex;  
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  text-align: center;
+  transition: linear 1s, transform 0.2s,opacity 1s;
+}
+
+.bubble:hover {
+  transform: scale(1.7);
+}
+
+.bubble--bust {
+  transform: scale(1.8);
+}
+
+#virusGame{
+  display: none;
+}
+#memoGame{
+  display: none;
+}
+.gameStart{
+  width: 40vw;
+  height: 50vh;
+  border: 1px solid black;
+  border-radius: 25%;
+}
+.dark .gameStart{
+  border-color: white;
+}
+.mainHead{
+  position: relative;
+  text-align: center;
+  top: 0;
+}
+#gameStarter{
+  display: flex;
+  justify-content: space-around;
+}
+.flexContain{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-top: 5vh;
+  height: 80vh;
+}
+
+#memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 10px;
+  max-width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#infoDisplay{
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  padding-right: 5vw;
+}
+
+.card {
+  width: 5vw;
+  height: 5vw;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.1); /* Slightly expand the cards on hover */
+  cursor: pointer;
+  transition: transform 0.2s; /* Smooth transition for scaling */
+}
+
+.card.spin {
+  transition: transform 0.6s; /* Smooth transition for spinning */
+  transform: rotate(360deg); /* Spin the card 360 degrees */
+}
+
+.card.flipped {
+  background-color: #ffcc00;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.card.flipped img {
+  display: block;
+}

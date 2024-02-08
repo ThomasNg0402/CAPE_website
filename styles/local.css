@@ -1,0 +1,44 @@
+.chart{
+    height: 50vh;
+    width: 60vw;
+}
+#row1{
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+.sectionchunk{
+    display: flex;
+}
+#row1 p{
+    padding: 15px 5vw 15px 5vw;
+}
+h1{
+    text-align: center;
+}
+#row1 lottie-player{
+    width: 30vw;
+    height: 50vh;
+}
+.center-text{
+    text-align: center;
+    font-size: large;
+}
+#loadingDiv{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(125,125,125,0.9);
+    flex-direction: column;
+}
+#loadingDiv lottie-player{
+    height: 25vh;
+    width: auto;
+}
+#loadingDiv p{
+    text-align: center;
+    font-size: larger;
+}

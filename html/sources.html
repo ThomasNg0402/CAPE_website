@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="titles">Location Based Statistics</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- My styles -->
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/location.css">
+        <link rel="stylesheet" href="../styles/home.css">
+        <!-- Lottie player -->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    </head>
+    <body>
+        <!-- Trailer -->
+        <div id="trailer">
+            <i id="trailer-icon"></i>
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <lottie-player src="../assets/logo.json" background="transparent" speed="1" loop autoplay></lottie-player>
+            </a>
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">CAPE</a>
+            <button class="navbar-toggler interactable" data-type="link" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Make everything else collapsable for mobile -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!-- Go to home -->
+                    <li class="nav-item interactable" data-type="link">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <!-- Go to about -->
+                    <li class="nav-item interactable" data-type="link">
+                        <a class="nav-link" href="information.html">Information</a>
+                    </li>
+                    <!-- Stats dropdown -->
+                    <li class="nav-item dropdown interactable" data-type="link">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Stats
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Global Stats -->
+                            <a class="dropdown-item interactable" data-type="link" href="globalstats.html">Global Stats</a>
+                            <a class="dropdown-item interactable" data-type="link" href="locationstats.html">Location Stats</a>
+                            <div class="dropdown-divider"></div>
+                            <!-- Current Location -->
+                            <a class="dropdown-item interactable" data-type="link" href="local.html">Local Stats</a>
+                        </div>
+                    </li>
+                    <!-- Activities -->
+                    <li class="nav-item dropdown interactable active" data-type="link">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Activities
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Games -->
+                            <a class="dropdown-item interactable" data-type="link" href="games.html">Games</a>
+                            <!-- Sources -->
+                            <a class="dropdown-item interactable active" data-type="link" href="sources.html">Sources</a>
+                        </div>
+                    </li>
+                    <!-- Go to donations -->
+                    <li class="nav-item interactable" data-type="link">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <!-- Dark mode light mode -->
+                    <li class="nav-item interactable" data-type="link">
+                        <a class="nav-link" onclick="ModeSwitch()"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+                            <dotlottie-player src="https://lottie.host/f1425de3-864a-438e-8dc3-bd61531b6889/4I71YMtUWy.json" id="dark-light-mode" background="transparent" speed="1" style="height: 25px;" loop autoplay></dotlottie-player></a>
+                    </li>
+                </ul>
+                <!-- Search Bar -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2 interactable" id="searchInput" data-type="search" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 interactable" data-type="search" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+        <div>
+            <h1 style="background-color: aqua;">
+                We use a lot of sources
+            </h1>
+        </div>
+        <div class="row-container">
+            <div class="letterrow">
+              <!-- Content for the first row, first column goes here -->
+              <div class="iconletter">
+                <div class="container-letter">       
+                    <img src="../assets/wikipedia.png" width="150px" height="150px">
+                </div>
+                <hr width="350px" color="black">  
+                <div class="container-row">
+                    <p>Usage: Wikipedia is utilized as a reference for gathering general information about COVID-19, including its history, symptoms, and global impact.
+                        Purpose: Wikipedia serves as a comprehensive knowledge base, providing accurate and detailed information to enhance the educational content on your website. It is a reliable source for understanding the background and context of the pandemic.</p>
+                </div>  
+              </div>
+            </div>
+            <div class="letterrow">
+              <!-- Content for the first row, second column goes here -->
+              <div class="iconletter">
+                <div class="container-letter">       
+                    <img src="../assets/ninjaapi.png" width="150px" height="150px">
+                </div>
+                <hr width="350px" color="black">  
+                <div class="container-row">
+                    <p>Usage: The Ninja API for COVID-19 is employed to fetch real-time statistics and data related to the pandemic, including global and local COVID-19 cases, deaths, and recovered cases.
+                        Purpose: Integrating the Ninja API enhances the website's functionality by providing users with up-to-date and accurate information on COVID-19 statistics. This dynamic data allows users to stay informed about the current state of the pandemic..</p>
+                </div>            
+              </div>
+            </div>
+            <div class="letterrow">
+              <!-- Content for the second row, first column goes here -->
+              <div class="iconletter">
+                <div class="container-letter">                     
+                    <img src="../assets/arcgis.png" width="150px" height="150px">
+                </div>
+                <hr width="350px" color="black">  
+                <div class="container-row">
+                    <p>Usage: The heatmap from Accgis is employed as a visualization tool to represent the concentration of COVID-19 cases globally. It visually displays the intensity of cases across different regions.
+                        Purpose: The heatmap adds a visual and interactive element to the website, allowing users to explore and understand the geographical spread of COVID-19. It provides an engaging way for users to grasp the global impact of the pandemic.</p>
+                </div>  
+              </div>
+            </div>
+            <div class="letterrow">
+              <!-- Content for the second row, second column goes here -->
+              <div class="iconletter">
+                <div class="container-letter">       
+                    <img src="../assets/lottie.png" width="150px" height="150px">
+                </div>
+                <hr width="350px" color="black">  
+                <div class="container-row">Usage: Lottie animations are used to enhance the visual appeal of the website. These animations are strategically placed to communicate information, such as introducing sections, providing attention-grabbing elements, and making the website more engaging.
+                    Purpose: Lottie animations bring a dynamic and modern feel to the website, making it more interactive and user-friendly. They serve to capture the user's attention, convey information in a visually appealing manner, and contribute to an overall positive user experience.</p>
+                </div>            
+              </div>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="footer-container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-muted">© 2024 CAPE, Inc</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+              </a>
+          
+              <ul class="nav col-md-3 justify-content-end">
+                <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="information.html" class="nav-link px-2 text-muted">Information</a></li>
+                <li class="nav-item"><a href="local.html" class="nav-link px-2 text-muted">Local Stats</a></li>
+                <li class="nav-item"><a href="globalstats.html" class="nav-link px-2 text-muted">Global Stats</a></li>
+                <li class="nav-item"><a href="locationstats.html" class="nav-link px-2 text-muted">Location Stats</a></li>
+                <li class="nav-item"><a href="games.html" class="nav-link px-2 text-muted">Games</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-muted">About Us</a></li>
+
+              </ul>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../scripts/mainjs.js"></script>
+        <script async src="../scripts/extraft.js"></script>
+    </body>
+</html>

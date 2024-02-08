@@ -1,0 +1,73 @@
+/* styles.css */
+#loadingDiv{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(125,125,125,0.9);
+    flex-direction: column;
+}
+#loadingDiv lottie-player{
+    height: 25vh;
+    width: auto;
+}
+#loadingDiv p{
+    text-align: center;
+    font-size: larger;
+}
+.data-container {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    margin: 0;
+}
+
+.flag-container {
+    width: 40%; /* Adjusted width */
+    overflow-y: hidden; /* Hide overflow */
+}
+
+.glamorous-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2; /* Change color as desired */
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #4a90e2; /* Border styling */
+    border-radius: 10px; /* Add rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Add smooth transition */
+}
+
+.glamorous-text:hover {
+    background-color: #4a90e2; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+.result-container {
+    width: 60%; /* Adjusted width */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.dark th{
+    color: black;
+}
+h2, p {
+    margin-bottom: 10px;
+}

@@ -1,0 +1,91 @@
+section{
+    position: relative;
+    height: max(140vh,fit-content+5vh);
+    background-color: rgba(12,12,12,0.2);
+    padding: 25vh 0 2.5vh 2.5vw;
+    z-index: -1;
+}
+@media only screen and (max-width: 990px){
+    section{
+      height: fit-content;
+      padding-bottom: 5vh;
+    }
+    #prevention{
+        height: fit-content;
+        padding-bottom: 5vh;
+    }
+}
+#prevention{
+    height: max(300vh,fit-content+5vh);
+}
+.prevent{
+    color: green;
+    font-size: large;
+}
+.dark .prevent{
+    color: lightgreen;
+}
+section p{
+    width: 80vw;
+}
+.dark section{
+    background-color: rgba(225,225,225,0.2);
+}
+.section-display-2{
+    background-color: rgba(25,25,25,0.2);
+}
+.dark .section-display-2{
+    background-color: rgba(200,200,200,0.2);
+}
+
+/* Fix off canvas to style well */
+/* Button for off canvas */
+#contentMenu{
+    /* aspect ratio doesnt work on old browsers and IE */
+    padding: 15px 20px 15px 20px;
+    background-color: #a7a7a7;
+    color: black;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    border-color: black;
+}
+.dark #contentMenu{
+    background-color: #505050;
+    border-color: white;
+    color: white;
+}
+/* Off canvas links */
+.offcanvas .offcanvas-body .nav-link{
+    padding: 15px 0 15px 0;
+}
+/* Off canva dark */
+.dark .offcanvas{
+    background-color: #505050;
+    color: white;
+}
+
+/* For information chunks */
+.highlight{
+    font-weight: bold;
+    font-size: large;
+}
+.symptom{
+    color: red;
+}
+
+
+/* Left slide */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* For Footer background */
+.footer-container{
+    background-color: lightblue;
+  }

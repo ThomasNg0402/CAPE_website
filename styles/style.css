@@ -1,0 +1,175 @@
+/* ----------------------------- */
+/* -------------Body------------ */
+/* ----------------------------- */
+body {
+    background-color: white;
+    height: 100vh;    
+    margin: 0px;  
+}
+.dark{
+    background-color: black;
+    color: white;
+}
+.dark #trailer #trailer-icon{
+    color: black;
+}
+*{
+    transition: 0.2s;
+}
+/* ----------------------------- */
+/* ------------Navbar----------- */
+/* ----------------------------- */
+#mainNav{
+    padding: 0.75rem;
+    animation: 1s ease-out 0s 1 slideInFromTop;
+    z-index: 10;
+}
+#mainNav .navbar-brand{
+    color: red;
+}
+#mainNav .navbar-brand:hover{
+    color: red;
+}
+#mainNav .nav-item{
+    font-weight: bold;
+}
+#mainNav .nav-item{
+    padding-left: 3vw;
+}
+/* ----------------------------- */
+/* ----------Lottie Logo-------- */
+/* ----------------------------- */
+#mainNav .navbar-brand lottie-player{
+    width: 3rem;
+    height: 3rem;
+}
+.dark hr{
+    color:color(srgb red green blue);
+    border-color: inherit;
+}
+
+.attention-getter {
+    color: #1E90FF; /* Set the text color to a bright or contrasting color */
+    font-size: 34px; /* Increase the font size */
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 1px; /* Add a small letter spacing */
+}
+.attention-getter:hover {
+    animation: bounce 1.5s ease;
+}
+.glamorous-icon1:hover {
+    animation: bounce 1.5s ease;
+}
+.glamorous-icon2:hover {
+    animation: bounce 1.5s ease;
+}
+.glamorous-icon3:hover {
+    animation: bounce 1.5s ease;
+}
+.glamorous-icon4:hover {
+    animation: bounce 1.5s ease;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+/* ----------------------------- */
+/* --------Mouse trailer-------- */
+/* ----------------------------- */
+/* Makes things become fully visible on hover */
+*{
+    cursor: none;
+}
+body:hover > #trailer {
+    opacity: 1;
+}
+/* Trailer */
+#trailer {
+    height: 20px;
+    width: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 5ms ease;
+    /* Ensures trailer doesn't load when extraft.js doesnt load */
+    display: none;
+    align-items: center;
+    justify-items: center;
+
+    mix-blend-mode: difference;
+}
+
+/* Ensures trailer is fully visible */
+#trailer:not([data-type=""]) > #trailer-icon {
+    opacity: 1;
+}
+#trailer:not([data-type=""]){
+    background-color: white;
+    opacity: 0.8;
+}
+#trailer-icon {
+    font-size: 6px;
+    line-height: 4px;
+    width: 50%;
+    font-style: normal;
+    transform: translateX(75%);
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+/* Edit interactables   */
+.interactable {
+    /* Makes transition effect */
+    opacity: 0.6;
+    transition: opacity 400ms ease;
+}
+  
+.interactable:hover {
+    opacity: 1;
+}
+/* Forces trailer to hide */
+/* Lazy to implement Javascript to check + Javascript unreliable */
+@media only screen and (max-width: 990px){
+    #trailer{
+      display: none !important;
+    }
+}
+@media only screen and (max-width: 990px){
+    #dark-light-mode{
+        height: 10vh;
+        width: auto;
+    }
+}
+/* Load in animations */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* For Footer background */
+.footer-container{
+    background-color: lightblue;
+}

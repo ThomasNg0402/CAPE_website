@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- My styles -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <!-- Lottie player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!--Script-->
+
+</head>
+<body>
+    <!-- Trailer -->
+    <div id="trailer">
+        <i id="trailer-icon"></i>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <lottie-player src="../assets/logo.json" background="transparent"  speed="1" loop autoplay></lottie-player>
+        </a>
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">CAPE</a>
+        <button class="navbar-toggler interactable" data-type="link" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Make everything else collapsable for mobile -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Current location -->
+                <li class="nav-item interactable active" data-type="link">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <!-- Go to about -->
+                <li class="nav-item interactable" data-type="link">
+                    <a class="nav-link" href="information.html">Information</a>
+                </li>
+                <!-- Stats dropdown -->
+                <li class="nav-item dropdown interactable" data-type="link">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Stats
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item interactable" data-type="link" href="globalstats.html">Global Stats</a>
+                        <a class="dropdown-item interactable" data-type="link" href="locationstats.html">Location Stats</a>
+                        <div class="dropdown-divider"></div>
+                        <!-- Local Stats -->
+                        <a class="dropdown-item interactable" data-type="link" href="#">Local Stats</a>
+                    </div>
+                </li>
+                <!-- Activities -->
+                <li class="nav-item dropdown interactable" data-type="link">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Activities
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Games -->
+                        <a class="dropdown-item interactable" data-type="link" href="games.html">Games</a>
+                        <!-- Sources -->
+                        <a class="dropdown-item interactable" data-type="link" href="sources.html">Sources</a>
+                    </div>
+                </li>
+                <!-- Go to donations -->
+                <li class="nav-item interactable active" data-type="link">
+                    <a class="nav-link" href="aboutus.html">About Us</a>
+                </li>
+                <!-- Dark mode light mode -->
+                <li class="nav-item interactable" data-type="link">
+                    <a class="nav-link" onclick="ModeSwitch()"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+                        <dotlottie-player src="https://lottie.host/f1425de3-864a-438e-8dc3-bd61531b6889/4I71YMtUWy.json" id="dark-light-mode" background="transparent" speed="1" style="height: 25px;" loop autoplay></dotlottie-player></a>
+                </li>
+            </ul>
+            <!-- Search Bar -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 interactable" id="searchInput" data-type="search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 interactable" data-type="search" type="submit">Search</button>
+        </form>
+        </div>
+    </nav>
+    <!-- Main -->
+    <slideshow>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="overlay-container">
+                    <img src="../assets/crowd.jpg" width="100%" height="600px" alt="Slide 2">
+                    <div class="slideoverlay">
+                        <div class="slide-text">
+                            <h1 class="intro">Keep Up With Covid</h1>
+                            <p class="intro2">Welcome to CAPE, our comprehensive COVID-19 Educational Website, where information meets visualization to empower you with a deeper understanding of the global impact of the pandemic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="overlay-container">
+                    <img src="../assets/covidbackground.png" width="100%" height="600px" alt="Slide 2">
+                    <div class="slideoverlay">
+                        <div class="slide-text">
+                            <h1 class="intro">Keep Up With Covid</h1>
+                            <p class="intro2">Welcome to CAPE, our comprehensive COVID-19 Educational Website, where information meets visualization to empower you with a deeper understanding of the global impact of the pandemic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides">
+                <div class="overlay-container">
+                    <img src="../assets/covid19_vaccine_391730621.jpeg" width="100%" height="600px" alt="Slide 3">
+                    <div class="slideoverlay">
+                        <div class="slide-text">
+                            <h1 class="intro">Keep Up With Covid</h1>
+                            <p class="intro2">Welcome to CAPE, our comprehensive COVID-19 Educational Website, where information meets visualization to empower you with a deeper understanding of the global impact of the pandemic.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </div>        
+    </slideshow>
+
+    <div class="row-container">
+        <div class="letterrow">
+          <!-- Content for the first row, first column goes here -->
+          <div class="iconletter">
+            <div class="container-letter">       
+                <span class="glamorous-icon1">C</span><span class="marginup">ontagion</span>
+            </div>
+            <hr width="350px" color="black">  
+            <div class="container-row">
+                <p>Understand the dynamics of contagion, exploring how viruses spread and impact communities. Stay informed about the latest trends and patterns to make informed decisions for your health and well-being.</p>
+            </div>  
+          </div>
+        </div>
+        <div class="letterrow">
+          <!-- Content for the first row, second column goes here -->
+          <div class="iconletter">
+            <div class="container-letter">       
+                <span class="glamorous-icon2">A</span><span class="marginup">wareness</span>
+            </div>
+            <hr width="350px" color="black">  
+            <div class="container-row">
+                <p>Elevate your awareness about the ongoing pandemic. Access up-to-date information, statistics, and educational resources to stay well-informed. Be empowered with knowledge to protect yourself and your community.</p>
+            </div>            
+          </div>
+        </div>
+        <div class="letterrow">
+          <!-- Content for the second row, first column goes here -->
+          <div class="iconletter">
+            <div class="container-letter">                     
+                <span class="glamorous-icon3">P</span><span class="marginup">revention</span>
+            </div>
+            <hr width="350px" color="black">  
+            <div class="container-row">
+                <p>Discover effective preventive measures and guidelines to shield yourself and others from the virus. Access practical tips, health recommendations, and resources that promote a proactive approach to minimizing the risk of infection.</p>
+            </div>  
+          </div>
+        </div>
+        <div class="letterrow">
+          <!-- Content for the second row, second column goes here -->
+          <div class="iconletter">
+            <div class="container-letter">       
+                <span class="glamorous-icon4">E</span><span class="marginup">mergency</span>
+            </div>
+            <hr width="350px" color="black">  
+            <div class="container-row">Be prepared for emergencies related to the pandemic. Gain access to resource centres nearest to your location to seek immediate help.</p>
+            </div>            
+          </div>
+        </div>
+    </div>
+    
+    <br> 
+    <div>
+        <h1 class="home-title">
+            OUR SERVICES
+        </h1>
+    </div>
+    <div class="lottie-container">
+        <div class="lottie-container"><dotlottie-player src="https://lottie.host/8a824e81-4872-432f-a5e7-220797060463/0uxMECJk5c.json" background="transparent" speed="0.75" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player></div>
+        <h2 class="attention-getter">HEATMAP</h2>
+    </div>
+    <hr width="350px" color="black">  
+    <div class="map-container">        
+        <div class = "map-elements">
+            <div class="image-container">
+                <div class="overlay"></div>
+                <img class="blurable-image" src="../assets/heatmap.png" width="700px" onclick="redirectToPage()">
+                <div class="hover-element">
+                  <p>View Full Heatmap</p>
+                </div>
+              </div>              
+        </div>
+        <div class="map-elements">
+            <div class="column">
+              <!-- Content for the first column goes here -->
+              <h3 class="intro-text">
+                Where information meets visualization to empower you with a deeper understanding of the global impact of the pandemic. At the heart of our commitment to providing you with valuable insights is our interactive and visually captivating COVID-19 Heatmap. Click on the Heatmap to see it fully!</h2>
+            </div>
+        </div>
+    </div>
+    <div class="lottie-container">
+        <h2 class="attention-getter">INFORMATION</h2>
+        <dotlottie-player src="https://lottie.host/2da6470f-ae01-4bca-8f20-6103648a5f38/wlwTjX7OuI.json" background="transparent" speed="0.25" style="width: 150px; height: 100px;" loop autoplay></dotlottie-player>
+    </div>
+    <hr width="350px" color="black">  
+    <div class="map-container">        
+        <div class = "map-elements">
+            <div class="image-container">
+                <p class="intro-text">Welcome to your gateway to understanding the dynamic landscape of COVID-19 cases around the world. In this section, we present real-time data and insightful visualizations, allowing you to explore and comprehend the ever-changing statistics related to the global pandemic.</p>    
+            </div>  
+            <button class="redirect-button" style="width: 300px; " onclick="redirectToInformation()">Go to Information Page</button>            
+        </div>
+    </div>
+    <div class="lottie-container">
+        <dotlottie-player src="https://lottie.host/1858f7fe-004b-4185-84eb-97662dcbcf07/JUJxnjtFc3.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+        <h2 class="attention-getter">STATISTICS</h2>
+    </div>
+    <hr width="350px" color="black">  
+    <div class="map-container">       
+        <div class="map-elements">
+            <p class="intro-text">Delve into the microscopic world of the COVID-19 virus as we unravel its mysteries and intricacies. In this section, we provide a comprehensive resource for understanding the virus's origin, structure, transmission, and the impact it has on the human body. Our goal is to equip you with accurate and accessible information, empowering you to make informed decisions regarding your health and safety.</p>
+
+        </div>
+    </div>
+    <button class="redirect-button" style="width: 300px; " onclick="redirectToStats()">Check out Statistics Page</button>            
+    <div class="lottie-container">
+        <h2 class="attention-getter">GAMES</h2>
+        <dotlottie-player src="https://lottie.host/02acfeef-4283-4537-8c2f-6384513046bd/KpU51q3D0v.json" background="transparent" speed="0.5" style="width: 150px; height: 150px;" loop autoplay></dotlottie-player>
+    </div>
+    <hr width="350px" color="black"> 
+    <div class="map-container">        
+        <div class = "map-elements">
+            <div class="column">
+                <!-- Content for the second column goes here -->
+                <button class="redirect-button" onclick="redirectToGames()">It's Gaming Time!</button>
+            </div>            
+        </div>
+        <div class="map-elements">
+            <div class="column">
+              <!-- Content for the first column goes here -->
+                <p class="intro-text">Learning about the pandemic can be both engaging and educational. Welcome to the Games Arena, where we combine fun with knowledge to offer an interactive experience in understanding the dynamics of a global health crisis. These games are designed to provide insights into pandemic scenarios, public health strategies, and the importance of community cooperation.</p>
+            </div>
+        </div>
+    </div>
+          
+    <!--Footer-->
+    <div class="footer-container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-muted">© 2024 CAPE, Inc</p>
+      
+          <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+      
+          <ul class="nav col-md-3 justify-content-end">
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="information.html" class="nav-link px-2 text-muted">Information</a></li>
+            <li class="nav-item"><a href="local.html" class="nav-link px-2 text-muted">Local Stats</a></li>
+            <li class="nav-item"><a href="globalstats.html" class="nav-link px-2 text-muted">Global Stats</a></li>
+            <li class="nav-item"><a href="locationstats.html" class="nav-link px-2 text-muted">Location Stats</a></li>
+            <li class="nav-item"><a href="games.html" class="nav-link px-2 text-muted">Games</a></li>
+            <li class="nav-item"><a href="aboutus.html" class="nav-link px-2 text-muted">About Us</a></li>
+
+          </ul>
+        </footer>
+    </div>  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../scripts/mainjs.js"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/dark/main.css" />
+    <script src="https://js.arcgis.com/4.28/"></script>
+    <!-- <script src="../scripts/mapapi.js"></script> -->
+    <script async src="../scripts/extraft.js"></script>
+    <script src = "../scripts/index.js"></script>
+</body>
+</html>
